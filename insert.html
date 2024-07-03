@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <style>
+     /* body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      } */
+
+      .form-container {
+        background-color: rgb(198, 219, 241);
+        position: absolute;
+        display: block;
+        justify-content: space-evenly;
+        padding: 20px;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 60%;
+        margin-left: 200px;
+        margin-top: 100px;
+        
+      }
+       
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-container label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+     
+      .form-container input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid palegoldenrod;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+      }
+   
+      .form-container input[type="text"]:focus {
+        border-color: #007bff;
+      }
+
+      .form-container button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background-color: #0056b3;
+      }
+ </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class="bx bxl-c-plus-plus"></i>
+          <span class="logo_name"><b>CODINGLAB</b></span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="active">
+              <i class="bx bx-grid-alt" style="color: red;"></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="insert.html" class="active1">
+              <i class="bx bx-box" style="color: blue;"></i>
+              <span class="links_name">Add Employee</span>
+            </a>
+          </li>
+          <li>
+            <a href="display.html" class="active2">
+              <i class="bx bx-list-ul" style="color: green;"></i>
+              <span class="links_name">Display Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="update.html" class="active3">
+              <i class="bx bx-pie-chart-alt-2" style="color: maroon;"></i>
+              <span class="links_name">Update Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active4">
+              <i class="bx bx-coin-stack" style="color: palevioletred;"></i>
+              <span class="links_name">Stock</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active5">
+              <i class="bx bx-book-alt" style="color: blueviolet;"></i>
+              <span class="links_name">Total order</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active6">
+              <i class="bx bx-user" style="color: palevioletred;"></i>
+              <span class="links_name">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active7">
+              <i class="bx bx-message" style="color: limegreen;"></i>
+              <span class="links_name">Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active8">
+              <i class="bx bx-heart" style="color: grey;"></i>
+              <span class="links_name">Favrorites</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active9">
+              <i class="bx bx-cog"  style="color: magenta;"></i>
+              <span class="links_name">Setting</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active10">
+              <i class="bx bx-log-out" style="color: black;"></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class="bx bx-menu sidebarBtn"  style="color:rgb(151, 246, 8);"></i>
+            <span class="dashboard"><b>DASHBOARD</b></span>
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <i class="bx bx-search" style="color:rgb(149, 244, 8);"></i>
+          </div>
+  
+         
+        </nav>
+           
+        <div class="form-container">
+          <h2>Enter Details</h2>
+          <label for="eno">Enter Employeeno.:</label>
+          <input type = "text" id="eno" />
+  
+          <label for="nm">Enter Name:</label>
+          <input type="text" id="nm" />
+  
+          <label for="city">Enter City:</label>
+          <input type="text" id="city" />
+  
+          <label for="salary">Enter Salary:</label>
+          <input type="text" id="salary" />
+  
+          <button id="btn1">Data Save</button>
+  
+  
+        </div>
+      
+           </section>
+  
+           
+  
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () {
+          sidebar.classList.toggle("active");
+          if (sidebar.classList.contains("active")) {
+            sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+          } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        };
+      </script>
+    
+  
+
+    <script src="js/insert.js"></script>
+</body>
+</html>

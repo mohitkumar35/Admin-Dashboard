@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      position: fixed;
+      background-color: rgb(255, 206, 214);
+      width: 10px;
+      height: 10px;
+      
+    }
+     
+    table {
+      background-color: lightcyan;
+        position: fixed;
+        justify-content: space-evenly;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 100px;
+        margin-left: 60px;
+    }
+
+    table th, table td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #009879;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    table tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    table tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    table tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+
+    table tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #009879;
+      outline: none;
+    }
+
+    .button {
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .button-edit {
+      background-color: #4CAF50; /* Green */
+    }
+
+    .button-save {
+      background-color: #008CBA; /* Blue */
+      display: none;
+    }
+
+    .button-delete {
+      background-color: #f44336; /* Red */
+    }
+  </style>
+
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class="bx bxl-c-plus-plus"></i>
+      <span class="logo_name"><b>CODINGLAB</b></span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html" class="active">
+          <i class="bx bx-grid-alt" style="color: red;"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="insert.html" class="active1">
+          <i class="bx bx-box"  style="color: blue;"></i>
+          <span class="links_name">Add Employee</span>
+        </a>
+      </li>
+      <li>
+        <a href="display.html" class="active2">
+          <i class="bx bx-list-ul"  style="color: green;"></i>
+          <span class="links_name">Display Data</span>
+        </a>
+      </li>
+      <li>
+        <a href="update.html" class="active3">
+          <i class="bx bx-pie-chart-alt-2" style="color: maroon;"></i>
+          <span class="links_name">Update Data</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active4">
+          <i class="bx bx-coin-stack" style="color: palevioletred;"></i>
+          <span class="links_name">Stock</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active5">
+          <i class="bx bx-book-alt" style="color: blueviolet;"></i>
+          <span class="links_name">Total order</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active6">
+          <i class="bx bx-user" style="color: palevioletred;"></i>
+          <span class="links_name">Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active7">
+          <i class="bx bx-message" style="color: limegreen;"></i>
+          <span class="links_name">Messages</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active8">
+          <i class="bx bx-heart" style="color: grey;"></i>
+          <span class="links_name">Favrorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active9">
+          <i class="bx bx-cog" style="color: magenta;"></i>
+          <span class="links_name">Setting</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active10">
+          <i class="bx bx-log-out"  style="color: black;"></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+ 
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="bx bx-menu sidebarBtn"  style="color:rgb(148, 241, 7);"></i>
+        <span class="dashboard"><b>DASHBOARD</b></span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="bx bx-search" style="color:rgb(149, 244, 8);"></i>
+      </div>
+     
+
+    </nav>
+    <div id="demo"></div>
+   
+       
+       
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function () {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    };
+  </script>
+
+
+    <script src="js/Update.js"></script>
+</body>
+</html>

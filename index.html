@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class="bx bxl-c-plus-plus" style="color:rgb(253, 216, 7);"></i>
+          <span class="logo_name"><b>CODINGLAB</b></span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="active">
+              <i class="bx bx-grid-alt" style="color: red;"></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="insert.html" class="active1">
+              <i class="bx bx-box" style="color: blue;"></i>
+              <span class="links_name">Add Employee</span>
+            </a>
+          </li>
+          <li>
+            <a href="display.html" class="active2">
+              <i class="bx bx-list-ul" style="color: rgb(7, 247, 7);"></i>
+              <span class="links_name">Display Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="update.html" class="active3">
+              <i class="bx bx-pie-chart-alt-2" style="color: rgb(250, 9, 9);"></i>
+              <span class="links_name">Update Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active4">
+              <i class="bx bx-coin-stack" style="color: rgb(244, 10, 88);"></i>
+              <span class="links_name">Stock</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active5">
+              <i class="bx bx-book-alt" style="color: rgb(130, 10, 241);"></i>
+              <span class="links_name">Total order</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active6">
+              <i class="bx bx-user" style="color: rgb(250, 13, 92);"></i>
+              <span class="links_name">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active7">
+              <i class="bx bx-message" style="color: rgb(10, 245, 10);"></i>
+              <span class="links_name">Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active8">
+              <i class="bx bx-heart" style="color: grey;"></i>
+              <span class="links_name">Favrorites</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active9">
+              <i class="bx bx-cog" style="color: magenta;"></i>
+              <span class="links_name">Setting</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active10">
+              <i class="bx bx-log-out" style="color: black;"></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class="bx bx-menu sidebarBtn" style="color:rgb(149, 244, 8);"></i>
+            <span class="dashboard"><b>DASHBOARD</b></span>
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <i class="bx bx-search" style="color:rgb(149, 244, 8);"></i>
+          </div>
+        
+        </nav>
+  
+           </section>
+  
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () {
+          sidebar.classList.toggle("active");
+          if (sidebar.classList.contains("active")) {
+            sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+          } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        };
+      </script>
+  
+</body>
+</html>
